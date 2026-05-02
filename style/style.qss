@@ -1,0 +1,189 @@
+/* style.qss — FinTrack Mini | Tema: Clean Green
+   Semua styling ada di sini. Tidak ada inline setStyleSheet() di kode. */
+
+QMainWindow, QDialog, QWidget {
+    background-color: #f5f7f5;
+    color: #1e2d1e;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 13px;
+}
+
+/* ── Menu Bar ── */
+QMenuBar {
+    background-color: #1e3a1e;
+    color: #d4edda;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-bottom: 2px solid #2d5a2d;
+}
+QMenuBar::item:selected {
+    background-color: #2d5a2d;
+    border-radius: 4px;
+}
+QMenu {
+    background-color: #f0faf0;
+    border: 1px solid #a5d6a7;
+    border-radius: 6px;
+    padding: 4px;
+}
+QMenu::item { padding: 8px 20px; border-radius: 4px; }
+QMenu::item:selected { background-color: #2d7a2d; color: #fff; }
+
+/* ── Identitas ── */
+QLabel#labelIdentitas {
+    background-color: #1e3a1e;
+    color: #d4edda;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+/* ── Saldo positif ── */
+QLabel#labelSaldo {
+    font-size: 14px;
+    font-weight: 800;
+    color: #1a5c1a;
+    padding: 10px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    border: 1px solid #a5d6a7;
+}
+
+/* ── Saldo negatif ── */
+QLabel#labelSaldoMinus {
+    font-size: 14px;
+    font-weight: 800;
+    color: #b71c1c;
+    padding: 10px;
+    background-color: #fce4ec;
+    border-radius: 8px;
+    border: 1px solid #f48fb1;
+}
+
+/* ── Count label ── */
+QLabel#labelCount {
+    color: #6b8f6b;
+    font-size: 11px;
+}
+
+/* ── Dialog title ── */
+QLabel#dialogTitle {
+    font-size: 15px;
+    font-weight: 800;
+    color: #1a5c1a;
+    padding: 4px 0 8px 0;
+}
+
+/* ── Input ── */
+QLineEdit, QComboBox, QDateEdit, QDoubleSpinBox, QSpinBox {
+    background-color: #ffffff;
+    border: 1.5px solid #b2d8b2;
+    border-radius: 7px;
+    padding: 6px 10px;
+    color: #1e2d1e;
+}
+QLineEdit:focus, QComboBox:focus,
+QDateEdit:focus, QDoubleSpinBox:focus {
+    border-color: #2d7a2d;
+    background-color: #f0faf0;
+}
+QComboBox::drop-down { border: none; width: 20px; }
+QComboBox QAbstractItemView {
+    background-color: #f0faf0;
+    border: 1px solid #a5d6a7;
+    selection-background-color: #2d7a2d;
+    selection-color: #fff;
+    border-radius: 6px;
+}
+QDoubleSpinBox::up-button, QDoubleSpinBox::down-button {
+    background-color: #e8f5e9;
+    border: none; border-radius: 3px; width: 16px;
+}
+QDoubleSpinBox::up-button:hover,
+QDoubleSpinBox::down-button:hover { background-color: #2d7a2d; }
+
+/* ── Tombol Simpan / Tambah ── */
+QPushButton#btnSimpan {
+    background-color: #2d7a2d; color: #fff;
+    border: none; border-radius: 7px;
+    padding: 8px 16px; font-weight: 700;
+}
+QPushButton#btnSimpan:hover { background-color: #1e5c1e; }
+
+/* ── Tombol Hapus ── */
+QPushButton#btnHapus {
+    background-color: #e74c3c; color: #fff;
+    border: none; border-radius: 7px;
+    padding: 8px 16px; font-weight: 700;
+}
+QPushButton#btnHapus:hover { background-color: #c0392b; }
+QPushButton#btnHapus:disabled { background-color: #d5e8d5; color: #8aab8a; }
+
+/* ── Tombol Batal ── */
+QPushButton#btnBatal {
+    background-color: #f0f0f0; color: #3a3a3a;
+    border: 1.5px solid #c0c0c0; border-radius: 7px;
+    padding: 8px 16px; font-weight: 600;
+}
+QPushButton#btnBatal:hover { background-color: #e0e0e0; }
+
+/* ── Tabel ── */
+QTableWidget#dataTable {
+    background-color: #ffffff;
+    alternate-background-color: #f5fbf5;
+    gridline-color: #e0f0e0;
+    border: 1px solid #c8e6c8;
+    border-radius: 8px;
+    color: #1e2d1e;
+    selection-background-color: #c8e6c9;
+    selection-color: #1b5e20;
+}
+QTableWidget#dataTable::item { padding: 7px 10px; }
+QHeaderView::section {
+    background-color: #1e3a1e;
+    color: #d4edda;
+    font-weight: 700;
+    padding: 9px 10px;
+    border: none;
+    border-right: 1px solid #2d5a2d;
+    border-bottom: 2px solid #4caf50;
+}
+
+/* ── Status Bar ── */
+QStatusBar {
+    background-color: #1e3a1e;
+    color: #a8d5a8;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+}
+
+/* ── Scroll Bar ── */
+QScrollBar:vertical {
+    background: #f0faf0; width: 8px; border-radius: 4px;
+}
+QScrollBar::handle:vertical {
+    background: #a5d6a7; border-radius: 4px; min-height: 20px;
+}
+QScrollBar::handle:vertical:hover { background: #2d7a2d; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }
+
+/* ── Message Box ── */
+QMessageBox { background-color: #f5f7f5; }
+QMessageBox QPushButton {
+    background-color: #2d7a2d; color: #fff;
+    border: none; border-radius: 6px;
+    padding: 7px 20px; font-weight: 600; min-width: 70px;
+}
+QMessageBox QPushButton:hover { background-color: #1e5c1e; }
+
+/* ── Tombol Edit ── */
+QPushButton#btnEdit {
+    background-color: #f39c12; color: #fff;
+    border: none; border-radius: 7px;
+    padding: 8px 16px; font-weight: 700;
+}
+QPushButton#btnEdit:hover { background-color: #d68910; }
+QPushButton#btnEdit:disabled { background-color: #d5e8d5; color: #8aab8a; }
+
